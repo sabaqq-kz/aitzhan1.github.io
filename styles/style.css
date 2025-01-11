@@ -1,0 +1,815 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+@font-face {
+    font-family: Asylbek;
+    src: url(../fonts/_AsylbekM02Shelley.kz_.ttf), format("ttf");
+}
+
+@font-face {
+    font-family: Andantino;
+    src: url(../fonts/KZ_Andantino_script_kz.ttf), format("ttf");
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf), format("ttf");
+}
+
+/* khabarlama */
+.unsupported {
+    display: none;
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/unsupported.jpg) center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.un-text {
+    font-family: 'Andantino';
+    font-size: 80px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+
+}
+
+/* Фон */
+.bg img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/bg.jpeg) center/cover no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -10;
+}
+
+/* intro */
+.intro {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.intro_image img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+.gradient_overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 90%);
+    z-index: 1;
+}
+
+/* Music player */
+.player {
+    position: absolute;
+    top: 75%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+/* Контейнер для вращающегося текста */
+.rotating-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    /* Чтобы элемент не вылезал за пределы */
+    z-index: 1;
+}
+
+.rotating-container svg {
+    animation: rotate 5s linear infinite;
+}
+
+.playStopBtn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #000;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 999;
+}
+
+.playStopBtn:hover {
+    background-color: #ebeaea;
+    transform: scale(1.05);
+}
+
+.playStopBtn:active {
+    transform: scale(1.03);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.rotating-text {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    color: #4CAF50;
+    transform-origin: center;
+    white-space: nowrap;
+}
+
+.rotating-text:nth-child(1) {
+    transform: rotate(0deg) translateX(120px);
+}
+
+.rotating-text:nth-child(2) {
+    transform: rotate(45deg) translateX(120px);
+}
+
+.rotating-text:nth-child(3) {
+    transform: rotate(90deg) translateX(120px);
+}
+
+.rotating-text:nth-child(4) {
+    transform: rotate(135deg) translateX(120px);
+}
+
+.rotating-text:nth-child(5) {
+    transform: rotate(180deg) translateX(120px);
+}
+
+.rotating-text:nth-child(6) {
+    transform: rotate(225deg) translateX(120px);
+}
+
+.rotating-text:nth-child(7) {
+    transform: rotate(270deg) translateX(120px);
+}
+
+.rotating-text:nth-child(8) {
+    transform: rotate(315deg) translateX(120px);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.lead {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+}
+
+svg {
+    font-family: 'Montserrat';
+    display: block;
+    margin: 0 auto;
+}
+
+.gul {
+    position: absolute;
+    bottom: -14%;
+    left: 0;
+    right: 0;
+    width: 50%;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.gul img {
+    width: 100%;
+}
+
+
+.jastar {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.jastar p {
+    font-family: 'Asylbek';
+    color: #000;
+    text-shadow: 0 5px 10px #000;
+    border-bottom: 1px solid #000;
+    width: 75%;
+    margin: 0 auto;
+}
+
+/* Shakiry */
+.shakiry {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+
+}
+
+.konak {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.konak p {
+    font-family: 'Andantino';
+    font-weight: normal;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.shakiru-text p {
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.element1 {
+    height: 100%;
+    width: 65%;
+    margin-left: -50px;
+}
+
+.element2 {
+    height: 50%;
+    width: 35%;
+}
+
+.toi-ueleri {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.toi-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.toi-text h1 {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.toi-text h2 {
+    font-family: 'Andantino';
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.element3 {
+    width: 100%;
+}
+
+/* ТОЙ КҮНІ */
+.toi-kuni {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.toi,
+.data {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.toi {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.data {
+    font-family: 'Andantino';
+    width: 300px;
+    margin-bottom: 15px;
+    animation: data-text 6s infinite ease-in-out;
+}
+
+@keyframes data-text {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Calendar */
+.container {
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.calendar {
+    margin-top: 20px;
+}
+
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar th,
+.calendar td {
+    font-family: 'Montserrat';
+    width: 14.28%;
+    text-align: center;
+    padding: 5px;
+}
+
+.calendar .selected {
+    border-radius: 50%;
+    position: relative;
+}
+
+.calendar .selected img {
+    width: 20x;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation: heart-beat 3s infinite;
+}
+
+/* Анимация для сердечка */
+@keyframes heart-beat {
+    0% {
+        transform: translate(-50%, -50%) scale(2);
+    }
+
+    25% {
+        transform: translate(-50%, -50%) scale(2.5);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(2);
+    }
+
+    75% {
+        transform: translate(-50%, -50%) scale(2.5);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(2);
+    }
+}
+
+
+.uakit {
+    font-family: 'Andantino';
+    margin-bottom: 40px;
+}
+
+/* toi bagdarlamasy */
+.toi-bagdarlama {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+
+    position: relative;
+    top: 0;
+    left: 0;
+
+}
+
+.bagdarlama-text {
+    font-family: 'Andantino';
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+.bagdarlama {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.bagdarlama-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bagdarlama-item img {
+    border-radius: 50%;
+    max-width: 100%;
+    width: 120px;
+    height: 120px;
+}
+
+.time {
+    width: 100px;
+    font-family: 'Montserrat';
+    text-align: center;
+}
+
+.ornek {
+    max-width: 100%;
+    height: 60%;
+    width: 5%;
+    margin: 0 auto;
+
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.gul-animation {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.gul-animation img {
+    width: 100%;
+    animation: gul 5s infinite ease-in-out;
+}
+
+@keyframes gul {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.orny {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.otkiz {
+    width: 100%;
+    font-family: 'Asylbek';
+    margin-bottom: 25px;
+}
+
+.adress {
+    font-family: 'Montserrat';
+    margin-bottom: 10px;
+}
+
+.toikhana {
+    font-family: 'Montserrat' serif;
+}
+
+.gis {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.gis img {
+    width: 50%;
+}
+
+/* karta */
+.map {
+    border-top: 1px solid #a3a3a3;
+    box-shadow: 0 5px 10px #000;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.map iframe {
+    margin: 0 auto;
+    width: 100%;
+    height: 40vh;
+}
+
+/* Таймер */
+
+.toigadein {
+    margin-bottom: 35px;
+}
+
+.dein {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.toi-uakit {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    overflow: hidden;
+}
+
+#time {
+    width: 100%;
+    height: 10vh;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.block span {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.days {
+    margin-right: 25px;
+}
+
+.hours {
+    margin-right: 25px;
+}
+
+.minutes {
+    margin-right: 25px;
+}
+
+
+.finished-message {
+    width: 100%;
+    text-align: center;
+    animation: message 6s ease-in-out infinite;
+}
+
+@keyframes message {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+
+.korimdik {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.korimdik-text {
+    font-family: 'Montserrat';
+    margin: 0 auto;
+    width: 300px;
+}
+
+
+
+.nomer {
+    font-family: 'Montserrat';
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 30px;
+    display: inline-flex;
+    align-items: center;
+    background: #d4a373;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nomer img {
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+    right: 0;
+    left: 85%;
+    top: -50%;
+    bottom: 0;
+    transform: rotate(15deg);
+}
+
+/* Тойға қатысу */
+.toiga-katisu1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.katisu1 {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+
+.toiga-katisu {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 300px;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: pink;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.toiga-katisu p {
+    font-family: 'Montserrat';
+    text-align: center;
+}
+
+.katisu,
+.katisu_uakit {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.katisu {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.katisu_uakit {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Montserrat';
+    box-sizing: border-box;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    font-family: 'Montserrat';
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    color: #333;
+    font-family: 'Montserrat';
+}
+
+.radio-group {
+    text-align: left;
+}
+
+.radio-group label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+
+input[type="radio"] {
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    max-width: 150px;
+    margin-top: 20px;
+    margin-left: 50px;
+    background-color: rgb(253, 134, 154);
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:active {
+    transform: scale(1.1);
+    background-color: rgb(250, 146, 163);
+}
+
+
+.rakhmet {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+#sendText {
+    color: #000;
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+}
